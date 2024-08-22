@@ -1,0 +1,184 @@
+# Question 1 Task 1: Implementing Email Input
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widith =device-width", initial-scale="1.0">
+        <title>Input Input Form</title>
+</head>
+<body> 
+    <h1>Email Input Form</h1>
+    <form action="/submit-email" method="post">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+# Question 1 Task 2: Utilizing Number Input
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widith =device-width", initial-scale="1.0">
+        <title>Number Input Form</title>
+</head>
+<body> 
+    <form action="/submit" method="post">
+        <label for="quantity">Enter Quantity:</label>
+        <input type="number" id="quantity" name="quantity" placeholder="Enter a number" min="1" max="100" step="1" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+# Question 1 Task 3: Employing Date Input
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widith =device-width", initial-scale="1.0">
+        <title>Date Input Form</title>
+</head>
+<body> 
+    <form action="/submit-date" method="post">
+        <label for="appointment-date">Select a date for your appointment:</label><br>
+        <input type="date" id="appointment-date" name="appointment-date"
+               placeholder="yyyy-mm-dd"
+               min="2024-03-04" max="2024-12-29" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+# Question 1 Task 4: Enhancing User Experience with Range Input
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widith =device-width", initial-scale="1.0">
+    <title>Range Input Example</title>
+    <style>
+        .range-value {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function updateRangeValue(val) {
+            document.getElementById('rangeValue').innerText = val;
+        }
+    </script>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <label for="rating">Rate your experiance:</label>
+        <input type="range" id="rating" nam="rating" min="1" max="10"
+value="5" oninput="updateRangeValue(this.value)">
+        <span class="range-value" id="rangeValue">5</span>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+# Question 2 Task 1: Creating a Selection Experience
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widith =device-width", initial-scale="1.0">
+        <title>Date Input Form</title>
+</head>
+<body> 
+    <h1> Selection Experiance Form</h1>
+    <form action="/submit" method="post">
+        <!-- Select Menu for Favorite Programming Language -->
+        <label for="favorite-language">Favorite Programming Language:</label>
+        <select id="favorite-language" name="favorite-language">
+            <option value="python">Python</option>
+            <option value="javascript">Javascript</option>
+            <option value="java">Java</option>
+            <option value="csharp">C#</option>
+            <option value="cpp">C++</option>
+            <option value="ruby">Ruby</option>
+        </select>
+        <br><br>
+
+        <!-- Radio Buttons for Level of Expertis -->
+        <label>Level of Expertise:</label><br>
+        <input type="radio" id="beginner" name="expertise" value="begginer">
+        <label for="beginner">Begginer</label><br>
+        <input type="radio" id="intermediate" name="expertise" value="intermediate">
+        <label for="intermediate">Intermediate</label><br>
+        <input type="radio" id="advanced" name="expertise" value="advanced">
+        <label for="advanced">Advanced</label><br><br>
+
+        <!-- Checkboxes for Preferred Development Platforms -->
+        <label>Preferred Developemnt Platforms:</label><br>
+        <input type="checkbox" id="web" name="platforms" value="web">
+        <label for="web">Web</label><br>
+        <input type="checkbox" id="mobile" name="platforms" value="mobile">
+        <label for="mobile">Mobile</label><br>
+        <input type="checkbox" id="desktop" name="platforms" value="desktop">
+        <label for="desktop">Desktop</label><br><br>
+
+        <!-- Submitt Button -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+# Question 2 Task 2: Improving Accessibility
+# Use the <label>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+# Implicit Association:
+<label>Username:
+    <input type="text" name="username">
+    </label>
+# Role Attribute:
+<div role="form">
+    <!-- Form elements go here -->
+</div>
+# ARIA Lables:
+<input type="text" aria-label="Username">
+# ARIA Description:
+<span id="usernameHelp">Enter your username.</span>
+<input type="text" aria-describedby="usernameHelp">
+# State and Property Attributes:
+<input type="checkbox" aria-checked="false">
+
+# an example of acessible form :
+<form role="form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" aria-describedby="usernameHelp">
+    <span id="usernameHelp">Enter your username.</span>
+    <label for="password":</label>
+    <input type="password" id="password" name="password">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
